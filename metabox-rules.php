@@ -18,7 +18,7 @@ function ma_meta_function(){
 }
 
 // build meta box, and get meta
-//function ma_meta_function($post){
+function ma_meta_function($post){
   // on récupère la valeur actuelle pour la mettre dans le champ
   $val = get_post_meta($post->ID,'_ma_valeur',true);
   echo '<label for="mon_champ">Mon champ : </label>';
