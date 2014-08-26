@@ -4,7 +4,7 @@ function init_metabox(){
 }
 // cette fonction me sert à inscrire checked, si jamais la valeur est coché
 function check($cible,$test){
-  if(in_array($test,$cible)){return 'checked';}
+  if(in_array($test,$cible)){return ' checked="checked" ';}
 }
 function conditionnement_vin($post){
   $cond = get_post_meta($post->ID,'_conditionnement_vin',false);
