@@ -9,12 +9,12 @@ function check($cible,$test){
 function conditionnement_vin($post){
   $cond = get_post_meta($post->ID,'_conditionnement_vin',false);
   echo 'Indiquez la Conditionnements disponibles :';
-  echo '<label><input type="checkbox" name="cond[]" value="5" /> Mignonette 5cl</label>';
-  echo '<label><input type="checkbox" name="cond[]" value="35" /> Demi-bouteille 35cl</label>';
-  echo '<label><input type="checkbox" name="cond[]" value="37" /> Fillette 37.5cl</label>';
-  echo '<label><input type="checkbox" name="cond[]" value="50" /> Désirée 50cl</label>';
-  echo '<label><input type="checkbox" name="cond[]" value="75" /> Bouteille 75cl</label>';
-  echo '<label><input type="checkbox" name="cond[]" value="150" /> Magnum 150cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 5 ) . ' name="cond[]" value="5" /> Mignonette 5cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 35 ) . ' name="cond[]" value="35" /> Demi-bouteille 35cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 37 ) . ' name="cond[]" value="37" /> Fillette 37.5cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 50 ) . ' name="cond[]" value="50" /> Désirée 50cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 75 ) . ' name="cond[]" value="75" /> Bouteille 75cl</label>';
+  echo '<label><input type="checkbox" ' . check( $cond, 150 ) . ' name="cond[]" value="150" /> Magnum 150cl</label>';
 }
 
 add_action('save_post','save_metabox');
